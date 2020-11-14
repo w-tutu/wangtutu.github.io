@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wangtutu.com/2020/11/14/newpapername/</loc>
+    
+    <lastmod>2020-11-14</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wangtutu.com/404.html</loc>
     
     <lastmod>2020-11-13</lastmod>
@@ -9,7 +16,7 @@
   </url>
   
   <url>
-    <loc>http://wangtutu.com/uncategorized/hello-world</loc>
+    <loc>http://wangtutu.com/2020/11/13/hello-world/</loc>
     
     <lastmod>2020-11-13</lastmod>
     
@@ -25,5 +32,12 @@
 
   
 
+  
+  <url>
+    <loc>http://wangtutu.com/categories/Diary/</loc>
+    <lastmod>2020-11-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
 </urlset>
