@@ -16,10 +16,10 @@ menu:
   关于:
     url: /about
     icon: fas fa-user-circle
-  友链:
+  留言板:
     url: /contact
     icon: fas fa-comments
-  工具:
+  友情链接:
     url: /friends
     icon: fas fa-address-book
   # 二级菜单写法如下
@@ -78,10 +78,10 @@ music:
     show: 听听音乐
   autoHide: true    # hide automaticaly
   server: netease   #require	music platform: netease, tencent, kugou, xiami, baidu
-  type: playlist    #require song, playlist, album, search, artist
-  id: 503838841     #require	song id / playlist id / album id / search keyword
+  type: song    #require song, playlist, album, search, artist
+  id: 34341349     #require	song id / playlist id / album id / search keyword
   fixed: true       # 开启吸底模式
-  autoplay: false   # 是否自动播放
+  autoplay: true   # 是否自动播放
   theme: '#42b983'
   loop: 'all'       # 音频循环播放, 可选值: 'all', 'one', 'none'
   order: 'random'   # 音频循环顺序, 可选值: 'list', 'random'
@@ -305,15 +305,15 @@ livere:
 # To use it, activate the configuration item and set appId and appKey.
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
-  enable: false
-  appId:
-  appKey:
+  enable: true
+  appId: 1FoGnsf2wtzeTQbQUOGkg8F0-gzGzoHsz
+  appKey: sTkdoG2O7dCJuXpRab4xHOpr
   notify: false
   verify: false
   visitor: true
   avatar: 'mm' # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
   pageSize: 10
-  placeholder: 'just go go' # Comment Box placeholder
+  placeholder: 快来评论吧！ # Comment Box placeholder
   background: /medias/comment_bg.png
 
 # The configuration of the MiniValine comment module is not activated by default.
@@ -321,7 +321,7 @@ valine:
 # MiniValine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 # See: https://github.com/MiniValine/MiniValine
 minivaline:
-  enable: true
+  enable: false
   appId: zhM0AOiqle17oPoE84CoYw1e-gzGzoHsz # Your leancloud application appid
   appKey: itmzT1JbXfAjVwMqDhGPzU45 # Your leancloud application appkey
   mode: DesertsP # DesertsP or xCss
