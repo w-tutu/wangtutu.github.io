@@ -6,6 +6,7 @@
 title: 王图图
 subtitle: 图图的个人博客
 description: 图图,前端,博客,javascript,html,html5,css,css3,vue,es6,git
+mobileDes: 勿忘初心，方得始终
 keywords: 图图,前端,博客,javascript,html,html5,css,css3,vue,es6,git
 author: 图图
 language: zh-CN
@@ -46,17 +47,24 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
+  enable: false
+  line_number: false
   auto_detect: false
   tab_replace: ''
-  wrap: true
+  wrap: false
   hljs: false
 prismjs:
-  enable: true
+  enable: false
   preprocess: true
-  line_number: true
+  line_number: false
   tab_replace: ''
+
+# 代码高亮
+prism_plugin:
+  mode: preprocess    # realtime/preprocess
+  theme: tomorrow
+  line_number: false    # default false
+  custom_css:
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -153,3 +161,11 @@ feed:
 permalink_pinyin:
   enable: true
   separator: '-' # default: '-'
+
+# emoji
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
