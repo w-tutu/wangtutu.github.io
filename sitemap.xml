@@ -2,9 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wangtutu.com/baidu_verify_code-6hfHKxduKO.html</loc>
+    
+    <lastmod>2020-11-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wangtutu.com/tags/index.html</loc>
+    
+    <lastmod>2020-11-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wangtutu.com/friends/index.html</loc>
+    
+    <lastmod>2020-11-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wangtutu.com/contact/index.html</loc>
+    
+    <lastmod>2020-11-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wangtutu.com/about/index.html</loc>
+    
+    <lastmod>2020-11-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wangtutu.com/categories/index.html</loc>
+    
+    <lastmod>2020-11-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wangtutu.com/2020/11/14/ceshi/</loc>
     
-    <lastmod>2020-11-14</lastmod>
+    <lastmod>2020-11-16</lastmod>
     
   </url>
   
@@ -18,11 +60,18 @@
 
   <url>
     <loc>http://wangtutu.com/</loc>
-    <lastmod>2020-11-14</lastmod>
+    <lastmod>2020-11-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>http://wangtutu.com/tags/git/</loc>
+    <lastmod>2020-11-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
 
   
