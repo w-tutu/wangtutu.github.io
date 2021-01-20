@@ -9,14 +9,14 @@
   </url>
   
   <url>
-    <loc>http://wangtutu.com/friends/index.html</loc>
+    <loc>http://wangtutu.com/tags/index.html</loc>
     
     <lastmod>2020-11-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wangtutu.com/tags/index.html</loc>
+    <loc>http://wangtutu.com/friends/index.html</loc>
     
     <lastmod>2020-11-16</lastmod>
     
@@ -53,7 +53,7 @@
 
   <url>
     <loc>http://wangtutu.com/</loc>
-    <lastmod>2020-11-17</lastmod>
+    <lastmod>2021-01-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -61,7 +61,7 @@
   
   <url>
     <loc>http://wangtutu.com/tags/git/</loc>
-    <lastmod>2020-11-17</lastmod>
+    <lastmod>2021-01-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
