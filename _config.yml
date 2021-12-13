@@ -169,3 +169,9 @@ githubEmojis:
   inject: true
   styles:
   customEmojis:
+
+# hexo-admin authentification
+admin:
+  username: wangtutu
+  password_hash: $2a$10$mC4HJL1hZuUzcBYaEBCtjuwuncv2/mO7m8EoGvElEthudXczyDJhW
+  secret: wangtutu123
