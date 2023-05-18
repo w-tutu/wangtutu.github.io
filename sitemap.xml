@@ -23,13 +23,6 @@
   </url>
   
   <url>
-    <loc>http://wangtutu.com/tags/index.html</loc>
-    
-    <lastmod>2020-11-16</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://wangtutu.com/friends/index.html</loc>
     
     <lastmod>2020-11-16</lastmod>
@@ -37,7 +30,7 @@
   </url>
   
   <url>
-    <loc>http://wangtutu.com/categories/index.html</loc>
+    <loc>http://wangtutu.com/tags/index.html</loc>
     
     <lastmod>2020-11-16</lastmod>
     
@@ -45,6 +38,13 @@
   
   <url>
     <loc>http://wangtutu.com/about/index.html</loc>
+    
+    <lastmod>2020-11-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wangtutu.com/categories/index.html</loc>
     
     <lastmod>2020-11-16</lastmod>
     
