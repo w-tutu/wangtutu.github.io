@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="git的使用与常用linux命令, 图图,前端,博客,javascript,html,html5,css,css3,vue,es6,git">
+    <meta name="keywords" content="防抖和节流, 图图,前端,博客,javascript,html,html5,css,css3,vue,es6,git">
     <meta name="description" content="图图,前端,博客,javascript,html,html5,css,css3,vue,es6,git">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>git的使用与常用linux命令 | 王图图</title>
+    <title>防抖和节流 | 王图图</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -260,12 +260,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">git的使用与常用linux命令</h1>
+                    <h1 class="description center-align post-title">防抖和节流</h1>
                 </div>
             </div>
         </div>
@@ -389,14 +389,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/git/">
-                                <span class="chip bg-color">git</span>
+                            <a href="/tags/JS/">
+                                <span class="chip bg-color">JS</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/JS/" class="post-category">
+                                JS
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -405,7 +414,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-14
+                    2023-05-18
                 </div>
                 
 
@@ -419,14 +428,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    479
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    1 分
                 </div>
                 
 
@@ -441,95 +450,52 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>为了告别手动方式管理Linux代码,并且符合开源和免费,Linus花了两周时间自己用 C 写了一个分布式版本控制系统，这就是Git。<br>　　Git迅速成为最流行的分布式版本控制系统，尤其是 2008 年 GitHub 网站上线了，它为开源项目 免费提供Git存储 ，无数开源项目开始迁移至GitHub，包括jQuery，PHP，Ruby等等。<br>　　<br>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-xSP32g6d-1605424209816)(<a target="_blank" rel="noopener" href="http://oi0f7tpni.bkt.clouddn.com/u=783377470,1728660278&amp;fm=214&amp;gp=0.jpg)]">http://oi0f7tpni.bkt.clouddn.com/u=783377470,1728660278&amp;fm=214&amp;gp=0.jpg)]</a>　　</p>
-<a id="more"></a>
-
-<h3 id="1-git的安装"><a href="#1-git的安装" class="headerlink" title="1. git的安装"></a>1. git的安装</h3><ul>
-<li>windows下的安装<br>下载地址: <a target="_blank" rel="noopener" href="http://git-scm.com/">http://git-scm.com</a></li>
-</ul>
-<blockquote>
-<p>windows安装过程中记得选择在cmd下使用linux命令</p>
+                <p>实际项目中经常会遇到一些函数的频繁重复调用，例如input搜索、用户频繁点击登录按钮、页面滚动至一定高度的scroll回调、窗口resize等消耗性能或频繁发送多余请求的操作，防抖以及节流可以有效的优化类似操作产生的性能消耗。</p>
+<h3 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h3><blockquote>
+<p>防抖可以简单的理解为当函数在一定时间内被频繁重复调用时只执行最后一次调用，通常用于针对一些不可预知的用户操作，例如用户重复快速点击登录按钮进行登录，只需在用户最后一次点击登录后执行登录相关逻辑即可。</p>
 </blockquote>
 <ul>
-<li>mac下安装<br>下载HomeBrew: <a target="_blank" rel="noopener" href="http://brew.sh/">http://brew.sh</a><br>拷贝对应脚本到终端下安装HomeBrew　然后在终端执行brew install git命令安装git</li>
+<li>代码如下：</li>
 </ul>
-<blockquote>
-<p>安装xcode会默认下载git</p>
+<pre class=" language-js"><code class="language-js">  <span class="token comment" spellcheck="true">/**
+   * @param fn: 需要进行防抖操作的方法
+   * @param delay: 禁止重复触发的时间间隔 单位ms
+   */</span>
+  <span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span> delay<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// 如果定时器存在则证明重复触发，需清除定时器开始重新计时</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        fn<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 注意apply arguments是类数组 fn([a,b,c])语义就变了 应该是fn(a,b,c)</span>
+        timer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 执行完毕后重置timer为null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> delay<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre>
+<h3 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h3><blockquote>
+<p>节流可以简单的理解为在我们规定的时间段内函数只执行一次，通常针对一些我们可以预知的会产生频繁重复的函数调用，例如滑动滚动条触发的scroll回调，无需频繁触发，我们可以规定每300ms执行一次即可。</p>
 </blockquote>
-<h3 id="2-配置git用户和邮箱"><a href="#2-配置git用户和邮箱" class="headerlink" title="2. 配置git用户和邮箱"></a>2. 配置git用户和邮箱</h3><pre class=" language-js"><code class="language-js">    $ git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">"你的github用户名"</span>
-    $ git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email <span class="token string">"你的github邮箱"</span></code></pre>
-<blockquote>
-<p>不配置用户名和邮箱的话无法提交，因为git不知道你是谁</p>
-</blockquote>
-<p>查看配置</p>
-<pre class=" language-js"><code class="language-js">    $ git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name
-  $ git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email</code></pre>
-<p>查看所有配置</p>
-<pre class=" language-js"><code class="language-js">    $git config <span class="token operator">--</span>list</code></pre>
-<h3 id="3-初始化git"><a href="#3-初始化git" class="headerlink" title="3. 初始化git"></a>3. 初始化git</h3><ul>
-<li>先创建一个空目录，可以直接手动创建，也可以在终端或命令行中输入mkdir 文件夹的名字 来创建，然后进入此目录，手动进入或在终端或命令行中输入cd（change directory）文件夹的名字，进入此目录（删除文件夹使用<code>$ rm -rf 文件夹名字</code>）</li>
-<li>windows在当前文件夹右键点击Git Bash Here打开命令行，mac在当前文件选择在此打开终端窗口，或者直接在cmd命令行或终端里输入 git init 来初始化git，告诉git当前目录归它所管理</li>
+<ul>
+<li>代码如下：</li>
 </ul>
-<blockquote>
-<p>通过ls -al 命令查看当前目录下的所有文件</p>
-</blockquote>
-<h3 id="4-git中的三个区"><a href="#4-git中的三个区" class="headerlink" title="4. git中的三个区"></a>4. git中的三个区</h3><p><a target="_blank" rel="noopener" href="http://card.mugeda.com/campaigns/56d2c4a0a3664e3308000407/20160304090522/56d97729a3664e9c65000047/index.html">git的工作流</a></p>
-<h4 id="4-1-工作区"><a href="#4-1-工作区" class="headerlink" title="4.1 工作区"></a>4.1 工作区</h4><p>通过git add 添加到暂存区</p>
-<pre class=" language-js"><code class="language-js">    $ git add <span class="token punctuation">.</span><span class="token operator">/</span><span class="token operator">-</span>a<span class="token operator">/</span>文件名</code></pre>
-<blockquote>
-<p>当前文件在命令行或终端里没有加入到暂存区是红色，加入后是绿色 可以通过<code>$ git status</code>命令查看；这里说几个常用的linux命令：</p>
-</blockquote>
-<pre class=" language-js"><code class="language-js">    $ touch 文件名  <span class="token comment" spellcheck="true">//创建文件</span>
-    $ echo 内容 <span class="token operator">></span><span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">.</span>txt  <span class="token comment" spellcheck="true">//一个大于号清空 创建 并写入 两个大于号追加</span>
-    $ cat 文件名  <span class="token comment" spellcheck="true">//查看文件</span>
-    $ vi 文件名  <span class="token comment" spellcheck="true">//修改文件 i键进入编辑状态 esc退出 :wq保存并退出  :q!强制退出</span></code></pre>
-<h4 id="4-2-暂存区"><a href="#4-2-暂存区" class="headerlink" title="4.2 暂存区"></a>4.2 暂存区</h4><p>特点：过渡的作用，避免误操作，保护工作区和历史区，分支处理；<br>通过git commit添加到历史区</p>
-<pre class=" language-js"><code class="language-js">    $ git commit <span class="token operator">-</span>m <span class="token string">'注释内容'</span>    </code></pre>
-<h4 id="4-3-历史区"><a href="#4-3-历史区" class="headerlink" title="4.3 历史区"></a>4.3 历史区</h4><p>历史区的内容只要电脑不爆炸、不手动删除.git文件，内容永远不会丢失<br>查看历史状态及提交版本号：</p>
-<pre class=" language-js"><code class="language-js">    $ git log <span class="token operator">/</span> $ git log <span class="token operator">--</span>oneline   <span class="token comment" spellcheck="true">//在命令末尾添加--oneline显示记录为一行    </span></code></pre>
-<p>一步提交到历史区：</p>
-<pre class=" language-js"><code class="language-js">    $ git commit <span class="token operator">-</span>a <span class="token operator">-</span>m<span class="token string">'注释内容'</span> <span class="token comment" spellcheck="true">//如果当前文件是首次提交则不支持此命令，需要逐步提交</span></code></pre>
-<blockquote>
-<p>有的时候我们希望提交时合并到上一次的提交: <code>$ git commit --amend</code>    </p>
-</blockquote>
-<p>在历史区中查询关键字：</p>
-<pre class=" language-js"><code class="language-js">    $ git log <span class="token operator">--</span>grep<span class="token operator">/</span><span class="token operator">--</span>author<span class="token operator">=</span>提交者名字    </code></pre>
-<h3 id="5-不同区的代码比较"><a href="#5-不同区的代码比较" class="headerlink" title="5. 不同区的代码比较"></a>5. 不同区的代码比较</h3><h4 id="5-1-工作区和暂存区"><a href="#5-1-工作区和暂存区" class="headerlink" title="5.1 工作区和暂存区"></a>5.1 工作区和暂存区</h4><pre class=" language-js"><code class="language-js">    $ git diff</code></pre>
-<h4 id="5-2-暂存区和历史区"><a href="#5-2-暂存区和历史区" class="headerlink" title="5.2 暂存区和历史区"></a>5.2 暂存区和历史区</h4><pre class=" language-js"><code class="language-js">    $ git diff <span class="token operator">--</span>cached</code></pre>
-<h4 id="5-3-工作区和历史区"><a href="#5-3-工作区和历史区" class="headerlink" title="5.3 工作区和历史区"></a>5.3 工作区和历史区</h4><pre class=" language-js"><code class="language-js">    $ git diff 分支的名字</code></pre>
-<h3 id="6-撤销"><a href="#6-撤销" class="headerlink" title="6. 撤销"></a>6. 撤销</h3><h4 id="6-1-撤销回暂存区中新加的内容（git-add的内容）"><a href="#6-1-撤销回暂存区中新加的内容（git-add的内容）" class="headerlink" title="6.1 撤销回暂存区中新加的内容（git add的内容）"></a>6.1 撤销回暂存区中新加的内容（git add的内容）</h4><pre class=" language-js"><code class="language-js">    $ git reset HEAD 文件名    </code></pre>
-<h4 id="6-2-撤回文件"><a href="#6-2-撤回文件" class="headerlink" title="6.2 撤回文件"></a>6.2 撤回文件</h4><p>先从暂存区撤销，暂存区无内容，从历史区撤销</p>
-<pre class=" language-js"><code class="language-js">    $ git checkout 文件名</code></pre>
-<h3 id="7-删除"><a href="#7-删除" class="headerlink" title="7. 删除"></a>7. 删除</h3><h4 id="7-1-删除暂存区和工作区"><a href="#7-1-删除暂存区和工作区" class="headerlink" title="7.1 删除暂存区和工作区"></a>7.1 删除暂存区和工作区</h4><p>删除暂存区中的内容,并且保证工作区中的内容已经不存在</p>
-<pre class=" language-js"><code class="language-js">    $ git rm 文件名  <span class="token comment" spellcheck="true">//若本地文件存在则不能删除，需要通过-f参数删除        </span></code></pre>
-<h4 id="7-2-仅删除暂存区"><a href="#7-2-仅删除暂存区" class="headerlink" title="7.2 仅删除暂存区"></a>7.2 仅删除暂存区</h4><pre class=" language-js"><code class="language-js">    $ git rm <span class="token operator">--</span>cached 文件名</code></pre>
-<h3 id="8-恢复（版本回退）"><a href="#8-恢复（版本回退）" class="headerlink" title="8. 恢复（版本回退）"></a>8. 恢复（版本回退）</h3><h4 id="8-1-版本回退（历史区→工作区）"><a href="#8-1-版本回退（历史区→工作区）" class="headerlink" title="8.1 版本回退（历史区→工作区）"></a>8.1 版本回退（历史区→工作区）</h4><pre class=" language-js"><code class="language-js">    $ git reset <span class="token operator">--</span>hard 版本号
-    $ git reset <span class="token operator">--</span>hard HEAD<span class="token operator">~</span><span class="token number">3</span>  <span class="token comment" spellcheck="true">// HEAD^去上一级    </span></code></pre>
-<h4 id="8-2-查看操作历史"><a href="#8-2-查看操作历史" class="headerlink" title="8.2 查看操作历史"></a>8.2 查看操作历史</h4><pre class=" language-js"><code class="language-js">    $ git log  <span class="token comment" spellcheck="true">//查看当前版本之前的内容</span>
-    $ git reflog  <span class="token comment" spellcheck="true">//查看所有操作历史        </span></code></pre>
-<h3 id="9-分支"><a href="#9-分支" class="headerlink" title="9. 分支"></a>9. 分支</h3><p>主要是写代码时，不会影响主代码</p>
-<h4 id="9-1-创建分支"><a href="#9-1-创建分支" class="headerlink" title="9.1 创建分支"></a>9.1 创建分支</h4><pre class=" language-js"><code class="language-js">    $ git branch 分支名字    </code></pre>
-<h4 id="9-2-查看分支"><a href="#9-2-查看分支" class="headerlink" title="9.2 查看分支"></a>9.2 查看分支</h4><pre class=" language-js"><code class="language-js">    $ git branch</code></pre>
-<h4 id="9-3-进入到分支（切换分支）"><a href="#9-3-进入到分支（切换分支）" class="headerlink" title="9.3 进入到分支（切换分支）"></a>9.3 进入到分支（切换分支）</h4><pre class=" language-js"><code class="language-js">    $ git checkout 分支名</code></pre>
-<h4 id="9-4-删除分支"><a href="#9-4-删除分支" class="headerlink" title="9.4 删除分支"></a>9.4 删除分支</h4><pre class=" language-js"><code class="language-js">    $ git branch <span class="token operator">-</span>D 分支名</code></pre>
-<h4 id="9-5-创建并切入分支"><a href="#9-5-创建并切入分支" class="headerlink" title="9.5 创建并切入分支"></a>9.5 创建并切入分支</h4><pre class=" language-js"><code class="language-js">    $ git checkout <span class="token operator">-</span>b dev  <span class="token comment" spellcheck="true">//创建并切入到dev分支上</span></code></pre>
-<h4 id="9-6-合并分支"><a href="#9-6-合并分支" class="headerlink" title="9.6 合并分支"></a>9.6 合并分支</h4><pre class=" language-js"><code class="language-js">    $ git merge 被合并的分支名</code></pre>
-<blockquote>
-<p>每个人都会拥有一条分支，开发自己的代码，自己的代码开发完成后提交到自己的历史区，主分支来进行合并分支    ，注意区分主分支</p>
-</blockquote>
-<h4 id="9-7-合并分支时产生冲突的原因"><a href="#9-7-合并分支时产生冲突的原因" class="headerlink" title="9.7 合并分支时产生冲突的原因"></a>9.7 合并分支时产生冲突的原因</h4><p>两个人同时改变了同一个文件。git不知道谁是对的，要让自己裁决，裁决好后再次提交。只能手动合并。</p>
-<h3 id="10-将本地内容推送到远程仓库"><a href="#10-将本地内容推送到远程仓库" class="headerlink" title="10. 将本地内容推送到远程仓库"></a>10. 将本地内容推送到远程仓库</h3><h4 id="10-1-关联远程仓库"><a href="#10-1-关联远程仓库" class="headerlink" title="10.1 关联远程仓库"></a>10.1 关联远程仓库</h4><pre class=" language-js"><code class="language-js">    $ git remote add origin（地址名） 远程仓库地址</code></pre>
-<h4 id="10-2-移除关联的远程仓库"><a href="#10-2-移除关联的远程仓库" class="headerlink" title="10.2 移除关联的远程仓库"></a>10.2 移除关联的远程仓库</h4><pre class=" language-js"><code class="language-js">    $ git remote rm origin（地址名）</code></pre>
-<h4 id="10-3-查看关联的远程仓库信息"><a href="#10-3-查看关联的远程仓库信息" class="headerlink" title="10.3 查看关联的远程仓库信息"></a>10.3 查看关联的远程仓库信息</h4><p>查看仓库名字</p>
-<pre class=" language-js"><code class="language-js">    $ git remote     </code></pre>
-<p>查看仓库地址</p>
-<pre class=" language-js"><code class="language-js">    $ git remote <span class="token operator">-</span>v</code></pre>
-<h4 id="10-4-推送到远程仓库"><a href="#10-4-推送到远程仓库" class="headerlink" title="10.4 推送到远程仓库"></a>10.4 推送到远程仓库</h4><p>要保证即将被推送到远程的内容已经添加到历史区，即已经执行过<code>$ git add .</code>&amp;&amp; <code>git commit -m""</code>，否则无法推送到远程仓库</p>
-<pre class=" language-js"><code class="language-js">    $ git push origin master <span class="token comment" spellcheck="true">//可以选择加不加-u(upstream)参数 首次推送如果加-u则以后每次拉取和推送直接执行git pull/git push即可</span></code></pre>
-<blockquote>
-<p>如果本地和线上版本不一致，则需先进行拉取，如果拉取后有冲突，需要手动解决冲突，然后再推送    </p>
-</blockquote>
-<p> 强制覆盖远程仓库内容：<code>$ git push origin master -f</code>（谨慎使用此命令…后果很严重，你懂的…）</p>
+<pre class=" language-js"><code class="language-js">  <span class="token comment" spellcheck="true">/**
+   * @param fn: 需要进行节流操作的方法
+   * @param delay: 规定函数执行的时间间隔 单位ms
+   */</span>
+  <span class="token keyword">function</span> <span class="token function">throttle</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span> delay<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// 如果定时器存在则证明没有还没有到达规定的时间间隔，直接return</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">// 规定delay时间间隔后执行fn</span>
+      timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        fn<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>fn<span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        timer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> delay<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre>
 
             </div>
             <hr/>
@@ -555,7 +521,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wangtutu.com/2020/11/14/git/">http://wangtutu.com/2020/11/14/git/</a>
+                    <a href="http://wangtutu.com/2023/05/18/fang-dou-jie-liu/">http://wangtutu.com/2023/05/18/fang-dou-jie-liu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -593,8 +559,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/git/">
-                                    <span class="chip bg-color">git</span>
+                                <a href="/tags/JS/">
+                                    <span class="chip bg-color">JS</span>
                                 </a>
                             
                         </div>
@@ -1027,9 +993,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/05/18/fang-dou-jie-liu/">
                     <div class="card-image">
@@ -1047,9 +1014,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1062,6 +1029,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1077,7 +1045,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2020/11/14/git/">
@@ -1107,7 +1075,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
