@@ -305,7 +305,7 @@ livere:
 # To use it, activate the configuration item and set appId and appKey.
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
-  enable: true
+  enable: false
   appId: 1FoGnsf2wtzeTQbQUOGkg8F0-gzGzoHsz
   appKey: sTkdoG2O7dCJuXpRab4xHOpr
   notify: false
@@ -361,9 +361,9 @@ minivaline:
     - https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest
 
 changyan:
-  enable: false
-  appId:
-  conf:
+  enable: true
+  appId: cywGpmTkr
+  conf: 7ea7fcf264d38836faa8ea03677584cc
 # Whether to display fork me on github icon and link, default true, You can change it to your repo address
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
