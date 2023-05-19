@@ -4,7 +4,7 @@
   <url>
     <loc>http://wangtutu.com/2023/05/18/fang-dou-jie-liu/</loc>
     
-    <lastmod>2023-05-18</lastmod>
+    <lastmod>2023-05-19</lastmod>
     
   </url>
   
@@ -37,14 +37,14 @@
   </url>
   
   <url>
-    <loc>http://wangtutu.com/categories/index.html</loc>
+    <loc>http://wangtutu.com/about/index.html</loc>
     
     <lastmod>2020-11-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wangtutu.com/about/index.html</loc>
+    <loc>http://wangtutu.com/categories/index.html</loc>
     
     <lastmod>2020-11-16</lastmod>
     
@@ -60,22 +60,22 @@
 
   <url>
     <loc>http://wangtutu.com/</loc>
-    <lastmod>2023-05-18</lastmod>
+    <lastmod>2023-05-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://wangtutu.com/tags/JS/</loc>
-    <lastmod>2023-05-18</lastmod>
+    <loc>http://wangtutu.com/tags/git/</loc>
+    <lastmod>2023-05-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://wangtutu.com/tags/git/</loc>
-    <lastmod>2023-05-18</lastmod>
+    <loc>http://wangtutu.com/tags/JS/</loc>
+    <lastmod>2023-05-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -84,7 +84,7 @@
   
   <url>
     <loc>http://wangtutu.com/categories/JS/</loc>
-    <lastmod>2023-05-18</lastmod>
+    <lastmod>2023-05-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
