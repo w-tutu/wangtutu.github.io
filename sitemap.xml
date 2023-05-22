@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://wangtutu.com/2020/11/14/git/</loc>
-    
-    <lastmod>2023-05-22</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://wangtutu.com/2023/05/22/css-hui-zhi-san-jiao-xing/</loc>
     
     <lastmod>2023-05-22</lastmod>
@@ -23,6 +16,13 @@
   </url>
   
   <url>
+    <loc>http://wangtutu.com/2020/11/14/git/</loc>
+    
+    <lastmod>2023-05-22</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wangtutu.com/2023/05/18/fang-dou-jie-liu/</loc>
     
     <lastmod>2023-05-21</lastmod>
@@ -30,14 +30,14 @@
   </url>
   
   <url>
-    <loc>http://wangtutu.com/friends/index.html</loc>
+    <loc>http://wangtutu.com/contact/index.html</loc>
     
     <lastmod>2020-11-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wangtutu.com/contact/index.html</loc>
+    <loc>http://wangtutu.com/friends/index.html</loc>
     
     <lastmod>2020-11-16</lastmod>
     
@@ -51,14 +51,14 @@
   </url>
   
   <url>
-    <loc>http://wangtutu.com/about/index.html</loc>
+    <loc>http://wangtutu.com/categories/index.html</loc>
     
     <lastmod>2020-11-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://wangtutu.com/categories/index.html</loc>
+    <loc>http://wangtutu.com/about/index.html</loc>
     
     <lastmod>2020-11-16</lastmod>
     
